@@ -1,19 +1,21 @@
 <p id="notice"><%= notice %></p>
 
 <div class="avatar">
+  <% if @profile %>
   <%= image_tag @profile.avatar.url(:medium) %>
+  <% end %>
 </div>
 
-<h1 class="fonte-bacana"><%= @profile.name %></h1>
+<h1 class="fonte-bacana"><%= @profile.try(:name) %></h1>
 
 <p>
-  Olá, meu nome é <b><%= @profile.name %></b>
+  Olá, meu nome é <b><%= @profile.try(:name) %></b>
 </p>
 
 <h3 class="fonte-bacana">Biografia</h3>
 <div class="div-bio">
   <span>
-    <%= @profile.bio %>
+    <%= @profile.try(:bio) %>
   </span>
 </div>
 
@@ -21,8 +23,10 @@
   <h3 class="fonte-bacana">Minhas habilidades são:</h3>
   <p>
     <ul>
+      <% if @profile && @profile.skills%>
       <% @profile.skills.each do |skill| %>
       <li class="atributos"><%= skill.name%></li>
+      <% end %>
       <% end %>
     </ul>
   </p>
@@ -31,6 +35,7 @@
 
 <h3 class="fonte-bacana">Jobs:</h3>
 
+<% if @profile && @profile.jobs%>
 <% @profile.jobs.each do |job| %>
 <div class="div-job">
   <div class="avatar img-job">
@@ -38,4 +43,5 @@
   </div>
   <div ><%= job.title %> <br/> <%= job.description %></div>
 </div>
+<%end%>
 <% end %>
