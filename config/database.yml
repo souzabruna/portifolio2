@@ -21,8 +21,8 @@ test:
   database: db/test.sqlite3
 
 production:
-  database: d6g2bn7eq1rq0d
-  username: yjmhcamkjoxuuf
+  database: dfpvncelh18748
+  username: yccmyihrnbeezl
   password: <%= ENV['DATABASE_PASSWORD'] %>
   adapter: postgresql
   encoding: unicode
