@@ -1,9 +1,12 @@
 // Place all the styles related to the Profiles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 body {
   text-align: center;
   color: black;
+  background-color: #BC8F8F	;
+  background-image: url(https://papeldeparededigital.com.br/wp-content/uploads/2015/06/floral-602-600x600.jpg);
 }
 
 ul {
@@ -34,16 +37,20 @@ li {
 }
 
 .img-job {
+  padding-top: 5%;
   width: 200px;
   height: 200px;
+
 }
 
 .div-job {
   width: 33%;
-  height: 400px;
   float: left;
-  background-color: #FFC0CB;
+  background-color: #FFE4E1;
 
+}
+.div-conteudo{
+  background-color: #FFE4E1;
 }
 .atributos{
   padding: 3px;
@@ -53,7 +60,7 @@ li {
 }
 .div-bio {
   width: auto;
-  background-color: #FFC0CB;
+  background-color: #FFE4E1;
 
 }
 
