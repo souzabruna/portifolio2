@@ -3,7 +3,7 @@
 <section class="section">
   <div class="avatar">
     <% if @profile %>
-    <%= image_tag @profile.avatar.url(:medium) %>
+    <%= image_tag @profile.avatar.url(:medium), class: "avatar-image" %>
     <% end %>
   </div>
   <h1 class="title">
@@ -40,7 +40,7 @@
   <% if @profile && @profile.jobs%>
     <% @profile.jobs.each do |job| %>
       <div class="job">
-        <div class="job-image"><%= image_tag job.image.url(:medium) %></div>
+        <div><%= image_tag job.image.url(:medium), class:"job-image" %></div>
         <%= job.title %> <br/> <%= job.description %>
       </div>
     <%end%>
