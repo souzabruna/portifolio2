@@ -1,49 +1,48 @@
 
 <p id="notice"><%= notice %></p>
-
-<div class="div-conteudo">
-
-<div class="avatar">
-  <% if @profile %>
-  <%= image_tag @profile.avatar.url(:medium) %>
-  <% end %>
-</div>
-
-<h1 class="fonte-bacana"><%= @profile.try(:name) %></h1>
-
-<p>
-  Olá, meu nome é <b><%= @profile.try(:name) %></b>
-</p>
-
-<h3 class="fonte-bacana">Biografia</h3>
-<span class="div-bio">
-  <%= @profile.try(:bio) %>
-</span>
-
-<p>
-  <h3 class="fonte-bacana">Minhas habilidades são:</h3>
-  <p>
-    <ul>
-      <% if @profile && @profile.skills%>
-      <% @profile.skills.each do |skill| %>
-      <li class="atributos"><%= skill.name%></li>
-      <% end %>
-      <% end %>
-    </ul>
-  </p>
-</p>
-
-
-<h3 class="fonte-bacana">Jobs:</h3>
-
-<% if @profile && @profile.jobs%>
-<% @profile.jobs.each do |job| %>
-<div class="div-job">
-  <div class="avatar img-job">
-    <%= image_tag job.image.url(:medium) %>
+<section class="section">
+  <div class="avatar">
+    <% if @profile %>
+    <%= image_tag @profile.avatar.url(:medium) %>
+    <% end %>
   </div>
-  <div ><%= job.title %> <br/> <%= job.description %></div>
-</div>
-<%end%>
-<% end %>
-</div>
+  <h1 class="title">
+    <%= @profile.try(:name) %>
+  </h1>
+  <span class="description">
+    Olá, meu nome é <b><%= @profile.try(:name) %></b>
+  </span>
+</section>
+
+
+<section class="section">
+  <h3 class="sub-title">Biografia</h3>
+  <span class="description">
+    <%= @profile.try(:bio) %>
+  </span>
+</section>
+
+
+<section class="section">
+  <h3 class="sub-title">Minhas habilidades são:</h3>
+  <ul>
+    <% if @profile && @profile.skills%>
+    <% @profile.skills.each do |skill| %>
+    <li class="atributos"><%= skill.name%></li>
+    <% end %>
+    <% end %>
+  </ul>
+</section>
+
+
+<section class="section">
+  <h3 class="sub-title">Jobs:</h3>
+  <% if @profile && @profile.jobs%>
+    <% @profile.jobs.each do |job| %>
+      <div class="job">
+        <div class="job-image"><%= image_tag job.image.url(:medium) %></div>
+        <%= job.title %> <br/> <%= job.description %>
+      </div>
+    <%end%>
+  <% end %>
+</section>

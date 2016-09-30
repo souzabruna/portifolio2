@@ -1,12 +1,18 @@
 // Place all the styles related to the Profiles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+head{
+  height: 100px;
+  background-color: pink;
+  padding-top: 0;
+}
 body {
   text-align: center;
   color: black;
-  background-color: #BC8F8F	;
-  background-image: url(https://papeldeparededigital.com.br/wp-content/uploads/2015/06/floral-602-600x600.jpg);
+  background-color: #FFB6C1	;
+//  background-image: url(https://papeldeparededigital.com.br/wp-content/uploads/2015/06/floral-602-600x600.jpg);
+background-image: url(http://www.casadopapeldeparede.com.br/wp-content/uploads/2013/04/989-64846.jpg);
+
 }
 
 ul {
@@ -19,12 +25,47 @@ li {
   list-style: nome;
 }
 
+h1 {
+  font-size: 3em;
+}
+
+h2, h3 {
+  font-size: 2em;
+}
+
 .outer-wrapper {
-  max-width: 650px;
+  max-width: 750px;
+  margin: auto;
+}
+.section{
+  padding: 25px;
+  background:#FFE4E1 ;
+  overflow: auto;
+  margin: 15px 0;
+}
+
+.title {
+  font-family: 'Dancing Script', regular;
+}
+
+.sub-title{
+  font-family: 'Lobster', cursive;
+}
+
+.avatar{
+  width: 120px;
+  height: 120px;
+  background: #c1c1c1;
+  margin: auto;
+  border-radius: 100%;
+  & img {
+    width: 100%;
+  }
+  overflow: auto;
   margin: auto;
 }
 
-.avatar {
+.avatar-image {
   width: 120px;
   height: 120px;
   background: #c1c1c1;
@@ -36,44 +77,20 @@ li {
   }
 }
 
-.img-job {
-  padding-top: 5%;
-  width: 200px;
-  height: 200px;
-
-}
-
-.div-job {
-  width: 33%;
+.job{
+  overflow: auto;
   float: left;
-  background-color: #FFE4E1;
-
-}
-.div-conteudo{
-  background-color: #FFE4E1;
-}
-.atributos{
-  padding: 3px;
-  border: 1px solid #c1c1c1;
-  margin: 1px 3px;
-  border-radius: 3px;
-}
-.div-bio {
-  width: auto;
-  background-color: #FFE4E1;
-
+  width: 33%;
 }
 
-
-
-.fonte-bacana {
-  font-family: 'Indie Flower', cursive;
-}
-
-h1 {
-  font-size: 3em;
-}
-
-h2, h3 {
-  font-size: 2em;
+.job-image {
+  width: 120px;
+  height: 120px;
+  background: #c1c1c1;
+  margin: auto;
+  border-radius: 100%;
+  overflow: hidden;
+  & img {
+    width: 100%;
+  }
 }
